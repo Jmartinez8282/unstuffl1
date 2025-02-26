@@ -4,15 +4,23 @@ import ViewImageScreen from "./screens/ViewImageScreen";
 import Borders from "./screens/Borders";
 import Shadows from "./screens/Shadows";
 import PaddingMargins from "./screens/PaddingMargins";
-import AppText from "./screens/AppText";
+import AppText from "./components/AppText/AppText";
+import {MaterialCommunityIcons} from "@expo/vector-icons";
+import AppButton from "./components/AppButton";
 
 export default function Index() {
   return (
-    <AppText/>
+
+      /* <AppText>Welcome Back to React Native</AppText>
+      <MaterialCommunityIcons name="email-outline" size={50} color
+      ="dodgerblue"/>
+<MaterialCommunityIcons name="window-close" size={24} color="red" /> */
+    /* <AppButton title="Login" onPress={() => alert("Pressed")}/> */
+ 
     // <PaddingMargins/>
     // <Shadows/>
     // <Borders/>
-    // <ViewImageScreen/>
+    <ViewImageScreen/>
   //  <WelcomeScreen/>
   );
 }

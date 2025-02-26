@@ -1,21 +1,28 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import AppButton from '../components/AppButton'
+import colors from '../config/colors'
 
 export default function WelcomeScreen() {
   return (
     <View style={styles.container}>
-        <ImageBackground source={require('../../assets/images/LivingRoom.jpg')} style={styles.welcomeBackground}>
+        <ImageBackground blurRadius={10} source={require('../../assets/images/LivingRoom.jpg')} style={styles.welcomeBackground}>
         <View style={styles.logoContainer}>
-        <Text>Unstuf</Text>
         <Image 
         source={require('../../assets/images/UnStuffLogo.png')}
         style={styles.logo}
         />
+        <Text style={styles.logoText}>Unstuf your life !</Text>
 
         </View>
 
-        <View style={styles.loginButton}></View>
-        <View style={styles.registerButton}></View>
+        <View style={styles.buttonContainer}>
+
+       <AppButton title="Login" onPress={() => alert("LoggedIn")}/>
+       <AppButton title="Register" onPress={() => alert("Registered")} color="secondary"/>
+       
+        </View>
+
 
         </ImageBackground>
        
@@ -36,11 +43,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center'
     },
-    loginButton: {
-        width:"100%",
-        height: 70,
-        backgroundColor: '#fc5c65'
-    },
+    
     registerButton: {
         width:"100%",
         height: 70,
@@ -49,13 +52,25 @@ const styles = StyleSheet.create({
     logo: {
         width: 100,
         height: 100,
-        position: 'absolute',
+        // position: 'absolute',
         top: 5,
     },
     logoContainer: {
         position: 'absolute',
-        top: 30,
+        top: 5,
         alignItems: 'center',
+        
        
+    },
+    logoText: {
+        fontSize: 28,
+        fontWeight: 500,
+        top: 5,
+        color: colors.dark
+    },
+    buttonContainer: {
+        padding: 20,
+        width: '100%',
+        
     }
 })
