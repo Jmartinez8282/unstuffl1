@@ -4,9 +4,10 @@ import styles from "./styles";
 
 interface Props {
   children: string;
+  style?: object;
 }
 
-export default function AppText({ children }: Props) {
-  return <Text style={styles.text}>{children}</Text>;
+export default function AppText({ children,style }: Props) {
+  return <Text style={[styles.text,style]}>{children}</Text>;
 }
 
