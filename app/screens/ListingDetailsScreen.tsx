@@ -16,6 +16,8 @@ export default function ListingDetailsScreen() {
                 image={require('../../assets/images/me.jpeg')}
                 title="Jose Martinez"
                 subTitle="5 Listings"
+                onPress={() => console.log("Pressed")}
+                renderRightActions={() => <View/>}
             />
 
             </View>

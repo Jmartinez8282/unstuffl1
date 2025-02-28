@@ -9,4 +9,5 @@ dark : '#0c0c0c',
 medium : '#6e6969',
 danger : '#ff5252', 
 
+
 }
